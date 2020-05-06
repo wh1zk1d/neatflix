@@ -29,7 +29,6 @@ const Movie = ({ title }) => {
     fetch(`http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&t=${title}`)
       .then((res) => res.json())
       .then((res) => {
-        console.log(res)
         const { Title, Year, Runtime, Poster } = res
         setMovie((state) => ({
           title: Title,

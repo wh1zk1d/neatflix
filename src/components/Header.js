@@ -38,6 +38,7 @@ const HeroStyles = styled(Container)`
 const MOTDStyles = styled.div`
   display: grid;
   align-items: center;
+  transform: translateY(-4rem);
 `
 
 const Hero = () => (
