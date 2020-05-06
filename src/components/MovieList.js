@@ -1,7 +1,16 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import allMovies from '../movies.json'
 import Movie from './Movie'
+
+import { fadeIn } from 'react-animations'
+const fadeAnimation = keyframes`${fadeIn}`
+
+const MovieListStyles = styled.div`
+  animation: 0.8s ${fadeAnimation};
+  animation-delay: 0.8s;
+  animation-fill-mode: both;
+`
 
 const MovieGrid = styled.div`
   display: grid;
@@ -15,14 +24,14 @@ const MovieList = () => {
   const [movies, setMovies] = useState(allMovies)
 
   return (
-    <div>
+    <MovieListStyles>
       <h2 style={{ marginBottom: '4rem' }}>All your favorite movies in one place</h2>
       <MovieGrid>
         {movies.map((movie) => (
           <Movie key={movie.id} title={movie.title} />
         ))}
       </MovieGrid>
-    </div>
+    </MovieListStyles>
   )
 }
 

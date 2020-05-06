@@ -1,10 +1,13 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import MovieOfTheDay from './MovieOfTheDay'
 import Menu from './Menu'
 import Container from './styles/Container'
 
 import heroBg from '../images/hero_poster.jpg'
+
+import { fadeIn } from 'react-animations'
+const fadeAnimation = keyframes`${fadeIn}`
 
 const HeaderStyles = styled.div`
   background: url(${heroBg}) no-repeat center center / cover;
@@ -40,22 +43,26 @@ const MOTDStyles = styled.div`
   align-items: center;
   // Same as header padding, but negative
   transform: translateY(calc((var(--base-padding) * 4) * -1));
+
+  animation: 0.8s ${fadeAnimation};
+  animation-delay: 0.4s;
+  animation-fill-mode: both;
 `
 
-const Hero = () => (
+const Hero = ({ movie }) => (
   <HeaderStyles>
     <HeroStyles>
       <Menu />
       <MOTDStyles>
-        <MovieOfTheDay title='Incredibles 2' />
+        <MovieOfTheDay title={movie} />
       </MOTDStyles>
     </HeroStyles>
   </HeaderStyles>
 )
 
-const Header = ({ hero }) => {
+const Header = ({ hero, movie }) => {
   if (hero) {
-    return <Hero />
+    return <Hero movie={movie} />
   } else {
     return (
       <Container>

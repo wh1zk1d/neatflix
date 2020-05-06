@@ -21,7 +21,7 @@ const App = () => (
   <div className='app'>
     <GlobalStyles />
     <LayoutContainer>
-      <Header hero />
+      <Header hero movie='Incredibles 2' />
       <Content>
         <Container>
           <MovieList />

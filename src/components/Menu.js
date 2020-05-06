@@ -1,8 +1,15 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+import { fadeIn } from 'react-animations'
+const fadeAnimation = keyframes`${fadeIn}`
 
 const MenuStyles = styled.header`
   padding: calc(var(--base-padding) * 4) 0;
+
+  animation: 0.8s ${fadeAnimation};
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
 `
 
 const MenuItems = styled.div`
