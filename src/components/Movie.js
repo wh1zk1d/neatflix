@@ -41,7 +41,7 @@ const Movie = ({ title }) => {
 
   return (
     <div>
-      <Poster src={movie.poster} alt={movie.title} height='300' />
+      <Poster src={movie.poster} alt={movie.title} />
       <Title>{movie.title}</Title>
       <Runtime>
         {movie.year} | {movie.runtime}
