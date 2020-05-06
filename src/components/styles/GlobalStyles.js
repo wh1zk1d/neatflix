@@ -1,10 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
+import bodyBg from '../../images/body_bg.png'
 
 const GlobalStyles = createGlobalStyle`
   :root {
     --color-primary: #ED3919;
-    --color-button-bg: HSL(208.7, 100%, 64.3%);
-    --color-button-bg_hover: HSL(212.7, 100%, 64.3%);
+    --color-button-bg: HSL(212.7, 100%, 64.3%);
+    --color-button-bg_hover: HSL(208.7, 100%, 64.3%);
     
     --font: 'Avenir Next', 'Inter', sans-serif;
 
@@ -30,7 +31,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background: #000 url(https://prod-static.disney-plus.net/eu-west-1/sections/app/builds/b894c8c8939d2ef966f2d5434ad1ba574656fc59_1588166918839/sections/app/node_modules/dss-junglebook/components/themes/images/background.png) no-repeat fixed center center / cover;
+    background: #000 url(${bodyBg}) no-repeat fixed center center / cover;
     color: #fff;
     font-family: var(--font);
     font-size: 1.6rem;
@@ -43,6 +44,11 @@ const GlobalStyles = createGlobalStyle`
 
   img {
     max-width: 100%;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
   }
 `
 

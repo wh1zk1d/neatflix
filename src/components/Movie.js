@@ -14,8 +14,7 @@ const Poster = styled.img`
 `
 
 const Title = styled.h3`
-  margin-top: var(--base-padding);
-  line-height: 1.5;
+  margin: var(--base-padding) 0;
 `
 
 const Runtime = styled.span`

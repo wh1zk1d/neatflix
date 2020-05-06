@@ -8,7 +8,7 @@ import heroBg from '../images/hero_poster.jpg'
 
 const HeaderStyles = styled.div`
   background: url(${heroBg}) no-repeat center center / cover;
-  height: 40em;
+  height: 42em;
   position: relative;
 
   &:after {
@@ -38,7 +38,8 @@ const HeroStyles = styled(Container)`
 const MOTDStyles = styled.div`
   display: grid;
   align-items: center;
-  transform: translateY(-4rem);
+  // Same as header padding, but negative
+  transform: translateY(calc((var(--base-padding) * 4) * -1));
 `
 
 const Hero = () => (
@@ -46,7 +47,7 @@ const Hero = () => (
     <HeroStyles>
       <Menu />
       <MOTDStyles>
-        <MovieOfTheDay title='The Incredibles' />
+        <MovieOfTheDay title='Incredibles 2' />
       </MOTDStyles>
     </HeroStyles>
   </HeaderStyles>

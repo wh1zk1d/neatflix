@@ -53,10 +53,13 @@ const MovieOfTheDay = ({ title }) => {
       <Subtitle>#Movieoftheday</Subtitle>
       <Movie>{movie.title}</Movie>
       <Details>
-        {movie.director} &#9679; {movie.year} &#9679; {movie.runtime} &#9679; IMDB: {movie.rating}
+        {movie.director} | {movie.year} | {movie.runtime} | IMDB: {movie.rating}
       </Details>
       <Plot>{movie.plot}</Plot>
-      <Button>
+      <Button
+        href='https://www.youtube.com/watch?v=x2qRDMHbXaM'
+        target='_blank'
+        rel='noopener noreferrer'>
         Watch now <MdPlayCircleOutline />
       </Button>
     </div>
