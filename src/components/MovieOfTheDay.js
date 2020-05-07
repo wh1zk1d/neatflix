@@ -17,6 +17,7 @@ const Movie = styled.h2`
 
 const Plot = styled.p`
   font-size: 2rem;
+  font-weight: 500;
   line-height: 1.5;
   max-width: 35em;
 `
@@ -24,13 +25,17 @@ const Plot = styled.p`
 const Details = styled.p`
   font-size: 1.6rem;
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 `
 
 const Awards = styled.p`
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius);
+  display: inline-block;
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 1.6rem;
+  padding: var(--base-padding);
 `
 
 const MovieOfTheDay = ({ title }) => {
